@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe City Safe Society</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showUserModal()">
+
+  <header>
+    <h1>Safe City Safe Society</h1>
+    <img src="logo.png" alt="Logo" class="logo">
+  </header>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Emergency</li>
+      <li>Nearby Police</li>
+      <li>Share Location</li>
+      <li>About Us</li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="button-group">
+      <button class="emergency-btn">Emergency</button>
+      <button class="police-btn">Nearby Police</button>
+    </div>
+
+    <div class="location-box" id="locationBox">
+      Detecting location...
+    </div>
+
+    <div class="filter-box">
+      <label>District: <input type="text" id="district"></label>
+      <label>Taluk: <input type="text" id="taluk"></label>
+      <label>Pincode: <input type="text" id="pincode"></label>
+      <button onclick="filterPolice()">Get Contacts</button>
+    </div>
+
+    <div id="policeContacts"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Safe City Initiative</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="userModal" class="modal">
+    <div class="modal-content">
+      <h2>User Information</h2>
+      <form id="userForm" onsubmit="return saveUserData(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="gender" placeholder="Gender" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="text" id="parentPhone" placeholder="Parent/Home Contact" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
