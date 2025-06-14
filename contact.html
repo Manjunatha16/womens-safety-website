@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact & Emergency Info</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="emergency.html">Emergency</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+   <!-- Location Display -->
+<div class="location-box large" id="locationBox">
+  Detecting location...
+</div>
+
+<!-- Filter Section -->
+<div class="filter-box">
+  <label>District:
+    <select id="district" onchange="updateTaluks()">
+      <option value="">Select District</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Mysore">Mysore</option>
+      <option value="Belgaum">Belgaum</option>
+    </select>
+  </label>
+
+  <label>Taluk:
+    <select id="taluk" onchange="updatePincodes()">
+      <option value="">Select Taluk</option>
+    </select>
+  </label>
+
+  <label>Pincode:
+    <select id="pincode">
+      <option value="">Select Pincode</option>
+    </select>
+  </label>
+
+  <button onclick="filterPolice()">Get Contacts</button>
+</div>
+
+<div id="policeContacts"></div>
+
+    </form>
+  </main>
+</body>
+</html>
