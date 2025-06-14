@@ -14,7 +14,7 @@ header {
 }
 
 header h1 {
-  margin: 0;
+  margin: opx;
 }
 
 .logo {
